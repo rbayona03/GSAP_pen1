@@ -44,3 +44,17 @@ main{
     width: 80px;
     height: 80px;
 }
+
+section{
+    height: 100vh;
+    background-color: brown;
+    color: whitesmoke;
+}
+
+.scrollContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

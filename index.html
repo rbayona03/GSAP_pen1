@@ -23,6 +23,13 @@
             <img src="img/hats.jpeg" alt="hats">
         </aside>
     </main>
+    <section>
+        <div class="scrollContent">
+            <h1>scroll animations</h1>
+            <h2>GSAP example</h2>
+            <p>This is GSAP Boiler plate examples</p>
+        </div>
+    </section>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js" integrity="sha512-eP6ippJojIKXKO8EPLtsUMS+/sAGHGo1UN/38swqZa1ypfcD4I0V/ac5G3VzaHfDaklFmQLEs51lhkkVaqg60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.js" integrity="sha512-eXYXyycwxk04NJgi6X8a0jHuY31zOl0WxjME5QTDDvaRCev+WRSir0e6ocPDuTBsx86OkfWobNM75JfovywNfQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -49,8 +56,20 @@
           
         }
     });
+
+    //Scroll animation section
+
+    let Scroll_tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: 'scrollContent',
+            start: '0%',
+            end: '100%',
+            scrub: 1
+        }
+    });
     
-    tl.fromTo('.square1', {y:-10}, {y:1000});
-    tl2.fromTo('.square2', {x:-10}, {x:900})
+    tl.fromTo('.square1', {y:-10}, {y:100});
+    tl2.fromTo('.square2', {x:-10}, {x:90})
+    Scroll_tl.To('h2', {x: -1000, y:-50}, {x:250, y: 250})
 </script>
 </html>
